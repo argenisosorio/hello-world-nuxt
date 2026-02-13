@@ -1,16 +1,19 @@
 <template>
   <div>
-    <h1>¡Hola Mundo desde Nuxt.js!</h1>
+    <nav>
+      <NuxtLink to="/">Home</NuxtLink> | 
+      <NuxtLink to="/users">Users</NuxtLink>
+    </nav>
+    <hr />
+
+    <NuxtPage />
   </div>
 </template>
 
-<style scoped>
-div {
-  font-family: sans-serif;
-  text-align: center;
-  margin-top: 50px;
-}
-h1 {
-  color: #00dc82; /* El color verde característico de Nuxt */
+<style>
+a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
 }
 </style>
