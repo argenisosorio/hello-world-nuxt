@@ -14,7 +14,8 @@ const { data: users, pending, error } = await useFetch('https://jsonplaceholder.
 
     <ul v-else>
       <li v-for="user in users" :key="user.id">
-        <strong>{{ user.name }}</strong> - {{ user.email }}
+        {{ user.name }} 
+        <NuxtLink :to="`/users/${user.id}`"> [Detail] </NuxtLink>
       </li>
     </ul>
 
