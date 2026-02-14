@@ -25,6 +25,10 @@
 </template>
 
 <script setup>
+
+useHead({
+  title: 'Users',
+})
 // Simularemos una llamada a la API de Backend usando una API de prueba real
 // Luego cambiaremos esta URL por la de tu servidor Backend local
 const { data: users, pending, error } = await useFetch('https://jsonplaceholder.typicode.com/users')

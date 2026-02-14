@@ -1,12 +1,3 @@
-<script setup>
-// Obtenemos el ID desde la URL
-const route = useRoute()
-const userId = route.params.id
-
-// Pedimos solo los datos de ese usuario específico
-const { data: user, pending, error } = await useFetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-</script>
-
 <template>
   <div>
     <GoBack />
@@ -26,6 +17,19 @@ const { data: user, pending, error } = await useFetch(`https://jsonplaceholder.t
     </div>
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'User detail',
+})
+
+// Obtenemos el ID desde la URL
+const route = useRoute()
+const userId = route.params.id
+
+// Pedimos solo los datos de ese usuario específico
+const { data: user, pending, error } = await useFetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+</script>
 
 <style scoped>
 </style>
