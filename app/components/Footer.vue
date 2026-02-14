@@ -1,6 +1,6 @@
 <template>
   <div>
-    <hr />
+    <hr>
     <footer>
       <p>© 2026 My Nuxt App</p>
     </footer>

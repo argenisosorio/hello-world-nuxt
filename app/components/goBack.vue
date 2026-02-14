@@ -2,14 +2,14 @@
 // Usamos el router de Nuxt para acceder al historial de navegación
 const router = useRouter()
 
-const navegarAtras = () => {
+const goBack = () => {
   // .back() funciona exactamente como el botón "atrás" del navegador
   router.back()
 }
 </script>
 
 <template>
-  <button @click="navegarAtras" class="btn-back">
+  <button class="btn-back" @click="goBack">
     ⬅ Go back
   </button>
 </template>
