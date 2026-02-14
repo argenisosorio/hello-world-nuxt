@@ -1,9 +1,10 @@
 <template>
   <header>
-    <nav class="main-nav">
-      <NuxtLink to="/">Home</NuxtLink>
-      <span class="divider">|</span>
-      <NuxtLink to="/users">Users</NuxtLink>
+    <nav class="navbar navbar-expand-lg">
+      <div class="navbar-nav">
+        <NuxtLink class="nav-link" to="/">Home</NuxtLink>
+        <NuxtLink class="nav-link" to="/users">Users</NuxtLink>
+      </div>
     </nav>
     <hr />
   </header>
