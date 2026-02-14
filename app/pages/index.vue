@@ -36,6 +36,11 @@
         </div>
       </div>
     </div>
+
+    <div style="text-align:center; margin-bottom:12px;">
+      <button class="btn btn-sm btn-primary" @click="showLoader">Mostrar loader 2s</button>
+      <button class="btn btn-sm btn-secondary" @click="hideLoader">Ocultar loader</button>
+    </div>
   </div>
 </template>
 
@@ -43,4 +48,15 @@
 useHead({
   title: 'Home'
 })
+
+// Estado global para controlar la visibilidad del loader
+const loader = useState('loader')
+
+function showLoader() {
+  loader.value = true
+}
+
+function hideLoader() {
+  loader.value = false
+}
 </script>

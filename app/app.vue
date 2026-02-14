@@ -1,5 +1,7 @@
 <template>
   <div>
+    <!-- El loader se muestra condicionalmente según el estado global 'loader' -->
+    <Loader v-if="loader" />
     <div class="container">
       <Navbar />
       <NuxtPage />
@@ -7,6 +9,11 @@
     </div>
   </div>
 </template>
+
+<script setup>
+// Estado global para controlar la visibilidad del loader
+const loader = useState('loader', () => false)
+</script>
 
 <style>
 a {
