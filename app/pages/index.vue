@@ -10,6 +10,10 @@
       class="img-fluid mb-3"
       width="50px"
     >
+    <br>
+
+    <p>Contador: {{ contador }}</p>
+    <button class="btn btn-primary" @click="incrementar">Sumar</button>
 
     <br>
 
@@ -40,15 +44,31 @@
 </template>
 
 <script setup>
+// 1. COMPOSABLES (Configuración de Nuxt)
 useHead({
   title: 'Home'
 })
 
-// Estado global para controlar la visibilidad del loader
+// 2. ESTADO (Variables)
 const loader = useState('loader')
+const contador = ref(0) // Estado local de esta página
 
-setTimeout(function() {
-  // Ocultamos el loader después de 3 segundos
-  loader.value = false
-}, 3000);
+// 3. MÉTODOS (Lógica)
+const incrementar = () => {
+  contador.value++
+}
+
+// 4. CICLO DE VIDA (Lifecycle)
+onMounted(() => {
+  console.log("Paso 1: La página ya es visible en el navegador")
+
+  setTimeout(() => {
+    loader.value = false
+    console.log("Paso 2: Han pasado 3 segundos y quité el loader")
+  }, 3000)
+})
+
+onUnmounted(() => {
+  console.log("Paso 3: El usuario se fue de Home")
+})
 </script>
