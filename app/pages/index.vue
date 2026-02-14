@@ -12,11 +12,6 @@
     >
     <br>
 
-    <p>Contador: {{ contador }}</p>
-    <button class="btn btn-primary" @click="incrementar">Sumar</button>
-
-    <br>
-
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Launch demo modal
@@ -44,31 +39,19 @@
 </template>
 
 <script setup>
-// 1. COMPOSABLES (Configuración de Nuxt)
 useHead({
   title: 'Home'
 })
 
-// 2. ESTADO (Variables)
 const loader = useState('loader')
-const contador = ref(0) // Estado local de esta página
 
-// 3. MÉTODOS (Lógica)
-const incrementar = () => {
-  contador.value++
-}
-
-// 4. CICLO DE VIDA (Lifecycle)
 onMounted(() => {
-  console.log("Paso 1: La página ya es visible en el navegador")
+  console.log("Activo el loader")
+  loader.value = true
 
   setTimeout(() => {
     loader.value = false
-    console.log("Paso 2: Han pasado 3 segundos y quité el loader")
+    console.log("Han pasado 3 segundos y quité el loader")
   }, 3000)
-})
-
-onUnmounted(() => {
-  console.log("Paso 3: El usuario se fue de Home")
 })
 </script>

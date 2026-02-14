@@ -12,9 +12,9 @@
 
 <script setup>
 /* Estado global para controlar la visibilidad del loader
- * Inicialmente el loader está visible
+ * Inicialmente el loader no está visible
 */
-const loader = useState('loader', () => true)
+const loader = useState('loader', () => false)
 </script>
 
 <style>
