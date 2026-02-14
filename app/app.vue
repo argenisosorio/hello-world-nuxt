@@ -1,12 +1,8 @@
 <template>
   <div>
-    <nav>
-      <NuxtLink to="/">Home</NuxtLink> | 
-      <NuxtLink to="/users">Users</NuxtLink>
-    </nav>
-    <hr />
-
+    <Navbar />
     <NuxtPage />
+    <Footer />
   </div>
 </template>
 
