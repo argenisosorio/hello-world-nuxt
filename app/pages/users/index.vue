@@ -1,9 +1,3 @@
-<script setup>
-// Simularemos una llamada a la API de Backend usando una API de prueba real
-// Luego cambiaremos esta URL por la de tu servidor Backend local
-const { data: users, pending, error } = await useFetch('https://jsonplaceholder.typicode.com/users')
-</script>
-
 <template>
   <div>
     <GoBack />
@@ -22,5 +16,21 @@ const { data: users, pending, error } = await useFetch('https://jsonplaceholder.
 
     <hr>
     <p>This data comes from an external API, simulating your backend.</p>
+
+    <div class="alert alert-info">
+      <p>El resultado de la suma es: <strong>{{ resultado_suma }}</strong></p>
+      <p>El resultado de la suma es: <strong>{{ resultado_resta }}</strong></p>
+    </div>
   </div>
 </template>
+
+<script setup>
+// Simularemos una llamada a la API de Backend usando una API de prueba real
+// Luego cambiaremos esta URL por la de tu servidor Backend local
+const { data: users, pending, error } = await useFetch('https://jsonplaceholder.typicode.com/users')
+
+const { sumar, restar } = utils()
+
+const resultado_suma = sumar(10, 5)
+const resultado_resta = restar(100, 75)
+</script>
