@@ -9,6 +9,7 @@ const { data: user, pending, error } = await useFetch(`https://jsonplaceholder.t
 
 <template>
   <div>
+    <GoBack />
     <div v-if="pending">Loading details...</div>
     
     <div v-else-if="error">

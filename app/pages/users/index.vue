@@ -6,6 +6,7 @@ const { data: users, pending, error } = await useFetch('https://jsonplaceholder.
 
 <template>
   <div>
+    <GoBack />
     <h1>Users List</h1>
 
     <p v-if="pending">Loading users from the backend...</p>
