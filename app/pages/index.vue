@@ -4,6 +4,15 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
+    <img
+      src="/images/star.png"
+      alt="star"
+      class="img-fluid mb-3"
+      width="50px"
+    />
+
+    <br>
+
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Launch demo modal
