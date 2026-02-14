@@ -11,8 +11,10 @@
 </template>
 
 <script setup>
-// Estado global para controlar la visibilidad del loader
-const loader = useState('loader', () => false)
+/* Estado global para controlar la visibilidad del loader
+ * Inicialmente el loader está visible
+*/
+const loader = useState('loader', () => true)
 </script>
 
 <style>
