@@ -27,7 +27,7 @@ useHead({
 
 // Simularemos una llamada a la API de Backend usando una API de prueba real
 // 'pending' es un booleano reactivo que cambia automáticamente
-const { data: response, pending, error } = await useFetch('https://jsonplaceholder.typicode.com/users', {
+const { data: response, pending, error } = await useFetch('http://127.0.0.1:8000/api/person', {
   lazy: true
 })
 

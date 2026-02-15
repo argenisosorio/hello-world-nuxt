@@ -11,8 +11,6 @@
       <h1>Profile from: {{ user.name }}</h1>
       <div >
         <p><strong>Email:</strong> {{ user.email }}</p>
-        <p><strong>City:</strong> {{ user.address?.city }}</p>
-        <p><strong>Company:</strong> {{ user.company?.name }}</p>
       </div>
     </div>
   </div>
@@ -28,7 +26,7 @@ const route = useRoute()
 const userId = route.params.id
 
 // Pedimos solo los datos de ese usuario específico
-const { data: user, pending, error } = await useFetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+const { data: user, pending, error } = await useFetch(`http://127.0.0.1:8000/api/person/${userId}`)
 </script>
 
 <style scoped>
